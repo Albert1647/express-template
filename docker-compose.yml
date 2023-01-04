@@ -1,0 +1,50 @@
+version: '3'
+services:
+  cache:
+    image: redis:alpine
+    container_name: redis
+    restart: always
+    ports:
+      - '6379:6379'
+    command: redis-server --save 60 1 --loglevel warning 
+    volumes:
+      - cache:/data
+    networks:
+      - local-dev
+  mongo:
+    container_name: researchermis_mongo
+    image: mongo
+    restart: always
+    ports:
+    - '27017:27017'
+    volumes:
+    - mongo-vol:/data/db
+    networks:
+      - local-dev
+  app:
+    # container_name: ResearchMIS_V2
+    container_name: backend
+    restart: always
+    build: .
+    ports:
+      - '5713:5713' 
+    volumes:
+      - "/etc/timezone:/etc/timezone:ro"
+      - "/etc/localtime:/etc/localtime:ro"
+      - ./public:/usr/src/app/public
+    depends_on: 
+      - mongo
+      - cache
+    networks:
+      - local-dev
+    # environment:
+    #   - TZ=Etc/GMT+8
+volumes:
+  mongo-vol:
+  cache:
+networks:
+  local-dev:
+    external: true
+
+  
+

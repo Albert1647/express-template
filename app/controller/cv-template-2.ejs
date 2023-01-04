@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Prompt&display=swap" rel="stylesheet" />
+  <!-- <link rel="stylesheet" href="/app/controller/icon/css/all.min.css">  -->
+  <!-- <link rel="stylesheet" href="style.css"> -->
+
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Prompt&display=swap");
+    @import url("https://fonts.googleapis.com/css2?family=Prompt:wght@400&display=swap");
+    @import url("https://fonts.googleapis.com/css2?family=Prompt:wght@600&display=swap");
+    @import url("https://fonts.googleapis.com/css2?family=Prompt:wght@800&display=swap");
+    @import url("https://fonts.googleapis.com/css2?family=Prompt:ital@1&display=swap");
+  </style>
+
+  <style>
+    body {
+      font-family: 'Prompt', Times, serif, sans-serif;
+    }
+
+    b {
+      font-weight: 400;
+    }
+
+    h1 {
+      font-weight: 800;
+    }
+
+    ul.a {
+      list-style-position: outside;
+      text-align: justify;
+    }
+
+    .keyword {
+      margin-top: 3px;
+      font-size: 10px;
+      display: inline-block;
+      margin: 0px 2px;
+    }
+
+    /* legend {
+      display: block;
+      width: 100%;
+      max-width: 100%;
+      margin-bottom: 0.5em;
+      padding: 0;
+      color: inherit;
+      white-space: normal;
+    }
+
+    legend span {
+      padding: 0 0.5rem 0 0;
+      background-color: #fff;
+      display: inline-block;
+      z-index: 2;
+      position: relative;
+      color: #0059AC;
+      font-weight: 400;
+      font-size: 14px;
+    } */
+
+    hr.custom-hr {
+      height: 1px;
+      background-color: #D5D5D5;
+      border: none;
+    }
+
+    ul li {
+      list-style-type: disc;
+      font-size: 10px;
+    }
+
+    .category {
+      color: #0059AC;
+      font-weight: 400;
+      font-size: 14px;
+    }
+
+    .sub-category {
+      color: #0059AC;
+      /* margin-left: 1rem; */
+      font-weight: normal;
+      font-size: 10px;
+    }
+
+    .name {
+      color: #0059AC;
+      font-size: 20px;
+      font-weight: 400;
+      margin: 0;
+      padding: 0;
+    }
+
+    .position {
+      font-size: 10px;
+      color: #0059AC;
+    }
+
+    .font-8 {
+      font-size: 8px;
+      color: #3C3C3C;
+    }
+
+    .font-10 {
+      font-size: 10px;
+      color: #3C3C3C;
+    }
+
+    .row-wrap {}
+
+    .col-4 {
+      display: -webkit-box;
+      padding-right: 15px;
+      padding-left: 15px;
+      flex: 25%;
+      flex-direction: column;
+      position: relative;
+    }
+
+    .col-12 {
+      display: -webkit-box;
+      padding-right: 15px;
+      padding-left: 15px;
+      flex: 100%;
+      flex-direction: column;
+      position: relative;
+    }
+
+    .col-8 {
+      display: -webkit-box;
+      padding-right: 15px;
+      padding-left: 15px;
+      flex: 66.666666;
+      flex-direction: column;
+      position: relative;
+    }
+
+    .underline {
+      color: #3C3C3C;
+      text-decoration: underline;
+      text-decoration-color: #3C3C3C;
+    }
+
+    .flex-row {
+      display: -webkit-box;
+      flex-direction: row;
+    }
+
+    .flex-col {
+      display: -webkit-box;
+      flex-direction: column;
+    }
+
+    .inline {
+      display: inline-block;
+    }
+
+    .vtop {
+      vertical-align: top;
+    }
+
+    .banner-detail {
+      padding-left: 1rem;
+    }
+
+    .banner__container {
+      display: -webkit-box;
+      flex-direction: row;
+      width: 100%;
+      overflow: hidden;
+    }
+
+    .banner__image-container {
+      padding: 8px;
+      max-width: 25%;
+    }
+
+    .banner__detail {
+      margin-left: 24px;
+    }
+
+    .banner__detail-row {
+      /* display: flex; */
+      display: -webkit-box;
+      /* flex-direction: row; */
+    }
+
+    .text-justify {
+      text-align: justify;
+    }
+
+    .page-margin {
+      padding: 0px 24px 0px 24px;
+      /* margin: 0px 24px 0px 24px; */
+    }
+
+    .nowrap {
+      flex-wrap: nowrap;
+    }
+
+    .banner__data {
+      width: 45%;
+      margin-right: 48px;
+    }
+
+    .banner__qr {
+      height: 100%;
+    }
+
+    .banner__qr-code-container {
+      width: 40%;
+      height: 40%;
+      position: relative;
+      padding: 20% 0;
+    }
+
+    .tab {
+      margin-left: 1rem;
+    }
+
+    .icon-container {
+      width: 15px;
+      height: 15px;
+      margin-right: 15px;
+    }
+
+    .icon-container svg {
+      fill: #FF6B00;
+    }
+
+    .center {
+      justify-content: center;
+      align-items: center;
+    }
+
+    .logo-container {
+      width: 50%;
+      height: 50%;
+      position: relative;
+    }
+
+    .link-to-website {
+      font-size: 6px;
+      color: #3C3C3C;
+      text-decoration-color: #3C3C3C;
+      margin-right: 24px;
+    }
+
+    .page-number {
+      margin: 12px;
+      font-size: 8px;
+    }
+
+    .richText p {
+      display: inline-block;
+    }
+  </style>
+</head>
+
+<body>
+  <main class="page-margin row-wrap">
+    <img class="logo-container" src="<%= objData.rdLogo %>" onerror="this.onerror=null;this.src='https://research.science.kmitl.ac.th/static/media/ava.aa007860.svg';" />
+    <header class="banner__container">
+      <div class="banner__image-container">
+        <img src="<%= objData.researcherPicture %>" onerror="this.onerror=null;this.src='https://research.science.kmitl.ac.th/static/media/ava.aa007860.svg';" width="100%" style="border-radius: 6px; top: 0px; margin-bottom: 0px" />
+      </div>
+      <section class="banner__detail">
+        <span class="name">
+          <%= objData.researcherName %>&nbsp;
+        </span>
+        <br />
+        <span class="position">(<%= objData.academicPosition %>)</span>
+        <br />
+        <hr class="custom-hr" />
+        <div class="banner__detail-row">
+          <div class="banner__data">
+            <div class="flex-col">
+              <div class="icon-container" style="padding-top: 9px;">
+                <%- include ("icon/map.svg") %>
+              </div>
+              <p class="text-justify font-10">
+                Address: &nbsp;<%= objData.Address %>
+              </p>
+            </div>
+            <div class="flex-col">
+              <div class="icon-container" style="padding-top: 3px;">
+                <%- include ("icon/envelope.svg") %>
+              </div>
+              <span class="text-justify inline font-10">
+                E-mail:&nbsp;<%=objData.email %>
+              </span>
+            </div>
+
+
+            <% if (objData.tel) { %>
+            <div class="flex-col">
+              <div class="icon-container" style="padding-top: 8px;">
+                <%- include ("icon/phone.svg") %>
+              </div>
+              <p class="text-justify font-10">
+                Tel: &nbsp;<%= objData.tel %>
+              </p>
+            </div>
+
+            <% }%>
+          </div>
+          <div class="banner__qr">
+            <div class="banner__qr-code-container">
+              <img src="<%= objData.qrCodeImage %>" onerror="this.onerror=null;this.src='https://research.science.kmitl.ac.th/static/media/ava.aa007860.svg';" width="100%" style="top: 0px; margin-bottom: 0px" />
+            </div>
+          </div>
+        </div>
+      </section>
+    </header>
+
+    <section>
+      <% if (objData.keywords_EN.length> 0) { %>
+      <hr class="custom-hr" />
+      <span class="category">Research Interest</span>
+      <br />
+      <% objData.keywords_EN.forEach((keyword,index)=> {%>
+      <div class="keyword font-10">
+        <%= keyword %><% if (index < objData.keywords_EN.length - 1 ) { %>,<% }%></div>
+      <% });%> <% }%>
+
+      <% if (objData.education.length> 0) { %>
+      <hr class="custom-hr" />
+      <span class="category">Education</span>
+      <br />
+      <ul>
+        <% objData.education.forEach(ed=> {%>
+        <li class="font-10" style="margin-bottom: 10px;">
+          <span><%=ed.degreeName_EN%></span>.&nbsp;
+          <span><%=ed.universityName_EN%></span>.&nbsp;
+          <span><%=ed.graduationYear%></span>.&nbsp;
+          <span><%=ed.universityCountry_EN%></span>.&nbsp;
+        </li>
+        <% });%>
+      </ul>
+      <% }%>
+      <hr class="custom-hr" />
+      <% if (objData.publicationsInter.length> 0 && objData.publicationsNational.length> 0) { %>
+      <span class="category">Publication</span>
+      <% if (objData.publicationsInter.length> 0) { %>
+      <div class="sub-category">International </div>
+      <ul>
+        <% objData.publicationsInter.forEach(publication=> {%>
+        <li class="font-10" style="margin-bottom: 10px;">
+          <span class="font-10" style="text-align: justify;">
+            <%= publication.name %>.&nbsp;
+            <i> <%= publication.owner %>.&nbsp; </i>
+            (<%= publication.year %>).&nbsp;<%=
+              publication.publicationLocation %>.&nbsp; <% if
+              (publication.volumn !=='' ) { %> <%= publication.volumn %>.&nbsp;
+            <% }%> <% if (publication.page !==null && publication.page !=="")
+              { %> pp.&nbsp;<%= publication.page %>. <% }%>
+          </span>
+        </li>
+        <% });%>
+      </ul>
+      <% }%>
+
+      <% if (objData.publicationsNational.length> 0) { %>
+      <div class="sub-category">National Publications</div>
+      <ul>
+        <% objData.publicationsNational.forEach(publication=> {%>
+        <li class="font-10" style="margin-bottom: 10px;">
+          <span style="text-align: justify;">
+            <%= publication.name %>.&nbsp;
+            <i> <%= publication.owner %>.&nbsp; </i>
+            (<%= publication.year %>).&nbsp;<%=
+              publication.publicationLocation %>.&nbsp; <% if
+              (publication.volumn !=='' ) { %> <%= publication.volumn %>.&nbsp;
+            <% }%> <% if (publication.page !==null && publication.page !=="")
+              { %> pp.&nbsp;<%= publication.page %>. <% }%>
+          </span>
+        </li>
+        <% });%>
+      </ul>
+      <% }%>
+      <% }%>
+      <% if (objData.awards.length> 0) { %>
+      <span class="category">Awards</span>
+      <ul>
+        <% objData.awards.forEach(award=> {%>
+        <li class="font-10" style="margin-bottom: 10px;">
+          <span style="text-align: justify;">
+            <%= award.name %>,&nbsp; <% if (award.researchName !== "" ) { %> <span class="richText"><%-
+              award.researchName  %></span>,&nbsp; <% }%> <% if (award.announcementLocation_EN !=="" ) {
+              %> <%= award.announcementLocation_EN %>,&nbsp; <% }%> <% if (award.country !==""
+              ) { %> <%= award.country %>,&nbsp; <% }%> <% if (award.year !==""
+              ) { %> <%= award.year %>,&nbsp; <% }%> <% if (award.ranking_EN !==""
+              ) { %> <%= award.ranking_EN %>,&nbsp; <% }%>
+          </span>
+        </li>
+        <% });%>
+      </ul>
+      <% }%>
+      <% if (objData.intProp.length> 0) { %>
+      <hr class="custom-hr" />
+      <span class="category">Intellectual Property</span>
+      <ul>
+        <% objData.intProp.forEach(intProp=> {%>
+        <li class="font-10" style="margin-bottom: 10px;">
+          <span style="text-align: justify;">
+            <% if(intProp.name_EN){ %>
+            <%= intProp.name_EN %>
+            <% } else{ %>
+            <%= 'N/A' %>
+            <% } %>,&nbsp;
+            <% if(intProp.coverage){ %>
+            <%= intProp.coverage %>
+            <% } else{ %>
+            <%= 'N/A' %>
+            <% } %>,&nbsp;
+            <% if(intProp.applicationNo){ %>
+            <%= 'Patent resignation no.' +intProp.applicationNo %>
+            <% } else{ %>
+            <%= 'N/A' %>
+            <% } %>,&nbsp;
+            <% if(intProp.patentRegisterNo){ %>
+            <%= 'Patent resignation no.' +intProp.patentRegisterNo %>
+            <% } else{ %>
+            <%= 'N/A' %>
+            <% } %>
+            <% if (intProp.attachment !=="" ) { %>
+            <span><a class="underline" href="<%= intProp.attachment %>"><%= ' attachment'%></span>
+            <% }%>
+          </span>
+        </li>
+        <% });%>
+      </ul>
+      <% }%>
+      <% if (objData.collaboration.length> 0) { %>
+      <hr class="custom-hr" />
+      <span class="category">Collaboration</span>
+      <ul>
+        <% objData.collaboration.forEach(collab=> {%>
+        <li class="font-10" style="margin-bottom: 10px;">
+          <span style="text-align: justify;">
+            <span style="text-align: justify;">
+              <% if (collab.topic !=="" ) { %>
+              <span class="richText"><%- collab.topic %>,&nbsp;</span>
+              <% }%>
+              <% if (collab.URL !=="" ) { %>
+              <a class="underline" href="<%= collab.URL %>"><%=collab.organization %></a>,&nbsp;
+              <% } else{ %>
+              <%=collab.organization %>
+              <% } %>
+              <%=collab.person.position +' '+collab.person.firstName + ' ' + collab.person.lastName + '.' %>&nbsp;
+            </span>
+          </span>
+        </li>
+        <% });%>
+      </ul>
+      <% }%>
+      <% if (objData.researchFund.length> 0) { %>
+      <hr class="custom-hr" />
+      <span class="category">Research Fund</span>
+      <ul>
+        <% objData.researchFund.forEach(fund=> {%>
+        <li class="font-10" style="margin-bottom: 10px;">
+          <span style="text-align: justify;">
+            <% if(fund.researchName_EN){ %>
+            <span class="richText"><%- fund.researchName_EN %></span>
+            <% } else{ %>
+            <%= 'N/A' %>
+            <% } %>,&nbsp;
+            <%= fund.role %>,&nbsp;
+            <%= fund.status %>,&nbsp;
+          </span>
+        </li>
+        <% });%>
+      </ul>
+      <% }%>
+      <% if (objData.highlight.length> 0) { %>
+      <hr class="custom-hr" />
+      <span class="category">Highlight</span>
+      <ul>
+        <% objData.highlight.forEach(highlight=> {%>
+        <li class="font-10" style="margin-bottom: 10px;">
+          <span style="text-align: justify;">
+            <span class="richText"><%- highlight.title %>,&nbsp;</span>
+            <%= highlight.year %>,&nbsp;
+            <a class="underline" href="<%= highlight.linkToWeb %>"><%= highlight.linkToWeb %>
+            </a>
+          </span>
+        </li>
+        <% });%>
+      </ul>
+      <% }%>
+    </section>
+  </main>
+
+</body>
+
+</html>
